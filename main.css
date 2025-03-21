@@ -1,59 +1,95 @@
-body {
-    background-color: black;
-    color: white;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.logo {
+    height: 40px;
+}
+.language-switcher {
+    font-size: 16px;
+}
+.login-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+}
+.login-logo {
+    height: 50px;
+    margin-bottom: 15px;
+}
+h2 {
+    color: #002b5b;
+    margin-bottom: 15px;
+}
+.role-switch {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    margin-bottom: 15px;
 }
-
-.container {
-    text-align: center;
-}
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-input[type="number"] {
+.role-switch button {
+    flex: 1;
     padding: 10px;
-    border-radius: 5px;
     border: none;
+    cursor: pointer;
+    background: #e0e0e0;
 }
-
-button {
-    background-color: gray;
+.role-switch .active {
+    background: #002b5b;
     color: white;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.confirm-btn {
+    width: 100%;
+    padding: 10px;
+    background: #ff7f50;
     border: none;
-    padding: 10px 15px;
-    margin: 5px;
+    color: white;
+    border-radius: 5px;
     cursor: pointer;
 }
-
-.counter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
+.confirm-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
 }
-
-#count {
-    font-size: 2rem;
-    font-weight: bold;
-    color: red;
-}
-
-.color-picker {
-    margin-top: 20px;
-}
-
-input[type="color"] {
+.logout-btn {
+    margin-top: 10px;
+    background: #d9534f;
+    color: white;
+    padding: 10px;
     border: none;
-    width: 40px;
-    height: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.qr-login {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
 }

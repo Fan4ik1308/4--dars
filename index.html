@@ -1,28 +1,37 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter</title>
+    <title>MARS IT School Login</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <div class="container">
-        <h1>Counter</h1>
-        <div class="input-group">
-            <input type="number" id="numberInput" placeholder="Enter your number">
-            <button id="sendBtn">Send</button>
-        </div>
-        <div class="counter">
-            <button id="decrement">-</button>
-            <span id="count">0</span>
-            <button id="increment">+</button>
-        </div>
-        <div class="color-picker">
-            <span>Select color</span>
-            <input type="color" id="colorPicker">
-        </div>
+        <header>
+            <img src="./images/image 2 (6).png" alt="MARS IT School Logo" class="logo">
+            <div class="language-switcher">🌍 O'zbek</div>
+        </header>
+        <main>
+            <div class="login-box">
+                <img src="./images/image 2 (6).png" alt="MARS IT School" class="login-logo">
+                <h2>Spacega xush kelibsiz</h2>
+                <div class="role-switch">
+                    <button class="active">O‘quvchiman</button>
+                    <button>Ota-onaman</button>
+                </div>
+                <input type="text" id="userInput" placeholder="Modme Id or Phone number" oninput="checkForm()">
+                <input type="password" id="passwordInput" placeholder="Password" oninput="checkForm()">
+                <button class="confirm-btn" id="confirmBtn" disabled onclick="login()">Tasdiqlash</button>
+                <p class="qr-login">QR code orqali kirish</p>
+                <button onclick="logout()" class="logout-btn">Log Out</button>
+            </div>
+        </main>
     </div>
+
     <script src="main.js"></script>
+    
+
 </body>
 </html>
+
